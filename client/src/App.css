@@ -1,0 +1,29 @@
+
+.v{
+background-image: url(../src/img/yellow-black-and-purple-colored-papers-2457284.jpg);
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+height: 900px;
+padding-top:20px;
+}
+.mar{
+    background: #FF512F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F09819, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F09819, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border-radius: 20px;
+padding:3%;
+margin:3%
+}
+.p{
+background: #FF512F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F09819, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F09819, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border-radius: 20px;
+margin: 5%;
+padding-top:15px;
+padding: 2%;
+}
+.x{
+margin:3%
+}
