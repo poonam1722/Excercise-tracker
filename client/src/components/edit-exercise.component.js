@@ -3,6 +3,7 @@ import DatePicker from 'react-datepicker';
 import '../../src/App.css'
 import 'react-datepicker/dist/react-datepicker.css';
 import axios from 'axios';
+require('dotenv').config();
 
 export default class EditExercise extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ export default class EditExercise extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:5000/exercises/' + this.props.match.params.id)
+      .get(`http://${process.env.URL}/exercises/` + this.props.match.params.id)
       .then((response) => {
         this.setState({
           username: response.data.username,
@@ -39,7 +40,7 @@ export default class EditExercise extends Component {
       });
 
     axios
-      .get('http://localhost:5000/users/')
+      .get(`http://${process.env.URL}/users/`)
       .then((response) => {
         this.setState({ users: response.data.map((user) => user.username) });
       })
@@ -86,7 +87,8 @@ export default class EditExercise extends Component {
 
     axios
       .post(
-        'http://localhost:5000/exercises/update/' + this.props.match.params.id,
+        `http://${process.env.URL}/exercises/update/` +
+          this.props.match.params.id,
         exercise
       )
       .then((res) => console.log(res.data));

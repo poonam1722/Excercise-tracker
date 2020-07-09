@@ -9,6 +9,7 @@ import {
   Form,
   Table,
 } from 'react-bootstrap';
+require('dotenv').config();
 const Exercise = (props) => (
   <tr>
     <td>{props.exercise.username}</td>
@@ -37,7 +38,7 @@ export default class ExercisesList extends Component {
     }
     componentDidMount() {
       axios
-        .get('http://localhost:5000/exercises/')
+        .get(`http://${process.env.URL}/exercises/`)
         .then((response) => {
           this.setState({ exercises: response.data });
         })
@@ -48,7 +49,7 @@ export default class ExercisesList extends Component {
 
     deleteExercise(id) {
       axios
-        .delete('http://localhost:5000/exercises/' + id)
+        .delete(`http://${process.env.URL}/exercises/` + id)
         .then((res) => console.log(res.data));
       this.setState({
         exercises: this.state.exercises.filter(

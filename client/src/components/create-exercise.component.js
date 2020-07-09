@@ -3,6 +3,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import axios from 'axios';
 import "../../src/App.css";
+require('dotenv').config();
 
 export default class CreateExercise extends Component {
 constructor(props) {
@@ -24,7 +25,7 @@ constructor(props) {
   
 componentDidMount() {
   axios
-    .get('http://localhost:5000/users/')
+    .get(`http://${process.env.URL}/users/`)
     .then((response) => {
       if (response.data.length > 0) {
         this.setState({
@@ -70,7 +71,7 @@ onChangeDate(date) {
   };
     console.log(exercise);
     axios
-      .post('http://localhost:5000/exercises/add', exercise)
+      .post(`http://${process.env.URL}/exercises/add`, exercise)
       .then((res) => console.log(res.data));
 window.location = '/';
 }

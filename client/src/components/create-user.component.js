@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import '../../src/App.css';
+require('dotenv').config();
 export default class CreateUser extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +24,7 @@ export default class CreateUser extends Component {
     console.log(newUser);
 
     axios
-      .post('http://localhost:5000/users/add', newUser)
+      .post(`http://${process.env.URL}/users/add`, newUser)
       .then((res) => console.log(res.data));
 
     this.setState({
