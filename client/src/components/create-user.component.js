@@ -24,7 +24,7 @@ export default class CreateUser extends Component {
     console.log(newUser);
 
     axios
-      .post(`http://${process.env.URL}/users/add`, newUser)
+      .post(`https://${process.env.URL}/users/add`, newUser)
       .then((res) => console.log(res.data));
 
     this.setState({
