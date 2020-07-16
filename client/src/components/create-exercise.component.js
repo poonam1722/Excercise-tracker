@@ -25,7 +25,7 @@ constructor(props) {
   
 componentDidMount() {
   axios
-    .get(`https://${process.env.URL}/users/`)
+    .get('/users/')
     .then((response) => {
       if (response.data.length > 0) {
         this.setState({
@@ -71,7 +71,7 @@ onChangeDate(date) {
   };
     console.log(exercise);
     axios
-      .post(`https://${process.env.URL}/exercises/add`, exercise)
+      .post('/exercises/add', exercise)
       .then((res) => console.log(res.data));
 window.location = '/';
 }
