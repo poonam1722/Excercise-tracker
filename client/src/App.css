@@ -1,9 +1,9 @@
 
 .v{
-background-image: url(../src/img/b.jpg);
+/* background-image: url(../src/img/b.jpg);
 background-position: center center;
 background-repeat: no-repeat;
-background-size: cover;
+background-size: cover; */
 height: 900px;
 padding-top:20px;
 }
@@ -26,4 +26,10 @@ padding: 2%;
 }
 .x{
 margin:3%
+}
+html{
+    background: #40E0D0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
