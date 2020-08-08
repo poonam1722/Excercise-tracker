@@ -101,14 +101,14 @@ export default class EditExercise extends Component {
       <div className="v">
         <div className="container">
           <div className="row">
-            <div className="mar">
+            <div className="mar col-md-4 col-8 mx-auto">
               <h3>Edit Exercise Log</h3>
               <form onSubmit={this.onSubmit}>
                 <div className="form-group">
                   <label>Username: </label>
                   <select
                     ref="userInput"
-                    className="form-control"
+                    className="form-control my-2"
                     value={this.state.username}
                     onChange={this.onChangeUsername}
                   >
@@ -121,7 +121,7 @@ export default class EditExercise extends Component {
                     })}
                   </select>
                 </div>
-                <div className="form-group">
+                <div className="form-group my-2">
                   <label>Description: </label>
                   <input
                     type="text"
@@ -135,14 +135,16 @@ export default class EditExercise extends Component {
                   <label>Duration (in minutes): </label>
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control my-2"
                     value={this.state.duration}
                     onChange={this.onChangeDuration}
                   />
                 </div>
                 <div className="form-group">
                   <label>Date: </label>
+                  <br />
                   <DatePicker
+                    className="my-2"
                     selected={this.state.date}
                     onChange={this.onChangeDate}
                   />
@@ -152,7 +154,7 @@ export default class EditExercise extends Component {
                   <input
                     type="submit"
                     value="Edit Exercise Log"
-                    className="btn btn-primary"
+                    className="btn btn-primary my-2"
                   />
                 </div>
               </form>

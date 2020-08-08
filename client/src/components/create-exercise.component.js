@@ -81,66 +81,65 @@ window.location = '/';
       <div className="v">
         <div className="container">
           <div className="row ">
-            <div className="mar x">
-              <div className="offset-xs-6 col-xs-5">
-                <h3>Create New Exercise Log</h3>
-                <form onSubmit={this.onSubmit}>
-                  <div className="form-group">
-                    <label>Username: </label>
-                    <select
-                      ref="userInput"
-                      required
-                      className="form-control"
-                      value={this.state.username}
-                      onChange={this.onChangeUsername}
-                    >
-                      {this.state.users.map(function (user) {
-                        return (
-                          <option key={user} value={user}>
-                            {user}
-                          </option>
-                        );
-                      })}
-                    </select>
-                  </div>
-                  <div className="form-group">
-                    <label>Description: </label>
-                    <input
-                      type="text"
-                      required
-                      className="form-control"
-                      value={this.state.description}
-                      onChange={this.onChangeDescription}
+            <div className="mar col-md-4 col-8 mx-auto">
+              <h3>Create New Exercise Log</h3>
+              <form onSubmit={this.onSubmit}>
+                <div className="form-group">
+                  <label>Username: </label>
+                  <select
+                    ref="userInput"
+                    required
+                    className="form-control my-2"
+                    value={this.state.username}
+                    onChange={this.onChangeUsername}
+                  >
+                    {this.state.users.map(function (user) {
+                      return (
+                        <option key={user} value={user}>
+                          {user}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </div>
+                <div className="form-group">
+                  <label>Description: </label>
+                  <input
+                    type="text"
+                    required
+                    className="form-control my-2"
+                    value={this.state.description}
+                    onChange={this.onChangeDescription}
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Duration (in minutes): </label>
+                  <input
+                    type="text"
+                    className="form-control my-2"
+                    value={this.state.duration}
+                    onChange={this.onChangeDuration}
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Date: </label>
+                  <div>
+                    <DatePicker
+                      className="my-2"
+                      selected={this.state.date}
+                      onChange={this.onChangeDate}
                     />
                   </div>
-                  <div className="form-group">
-                    <label>Duration (in minutes): </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      value={this.state.duration}
-                      onChange={this.onChangeDuration}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label>Date: </label>
-                    <div>
-                      <DatePicker
-                        selected={this.state.date}
-                        onChange={this.onChangeDate}
-                      />
-                    </div>
-                  </div>
+                </div>
 
-                  <div className="form-group">
-                    <input
-                      type="submit"
-                      value="Create Exercise Log"
-                      className="btn btn-primary"
-                    />
-                  </div>
-                </form>
-              </div>
+                <div className="form-group">
+                  <input
+                    type="submit"
+                    value="Create Exercise Log"
+                    className="btn btn-primary my-2"
+                  />
+                </div>
+              </form>
             </div>
           </div>
         </div>

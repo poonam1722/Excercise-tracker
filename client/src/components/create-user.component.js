@@ -37,8 +37,7 @@ export default class CreateUser extends Component {
     <div className="v">
       <div className="container">
         <div className="row">
-        
-          <div className="mar x">
+          <div className="mar col-md-4 col-8 mx-auto">
         <div className="b">
             <h3>Create New User</h3>
             <form onSubmit={this.onSubmit}>
@@ -47,7 +46,7 @@ export default class CreateUser extends Component {
                 <input
                   type="text"
                   required
-                  className="form-control"
+                  className="form-control my-3"
                   value={this.state.username}
                   onChange={this.onChangeUsername}
                 />
